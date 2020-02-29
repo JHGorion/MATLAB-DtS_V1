@@ -1,0 +1,46 @@
+MATLAB codes to check the spectrum detection algorithm based on the processing of instantaneous magnitude.
+
+You can find the article at PDF URL:
+IN ENGLISH:
+https://www.researchgate.net/publication/339375075_Spectrum_sensing_based_in_the_statistical_processing_of_instantaneous_magnitudes
+
+DtS_V1 %Basic directory.
+DtS_V1\Sx %Contains signal generation functions
+DtS_V1\GRAFICOS %Contains the functions to graph.
+DtS_V1\bASx %Contains the function to obtain vectors I and Q of the generated signal
+DtS_V1\bOPI %It contains the functions to obtain the instantaneous magnitudes
+DtS_V1\bDIEP %It contains modules that make up the block detection, identification and parameter estimation
+DtS_V1\bDIEP\mPEVD % Statistical processing module with sliding window. Contains the functions for calculating statistics of instantaneous magnitudes
+DtS_V1\bDIEP\mDtS % Detection module. It contains the function that performs the spectrum detection from the statistics calculated in the mPEVD   
+
+DtS_V1\TestMDtS_VRepresDetecFHSS.m
+%SCRIPT to implement the detection module based on the statistical processing of the instantaneous magnitudes. The generated signal, the detection threshold is plotted and compared to the ideal detection.
+
+DtS_V1\TestMDtS_VDetermErrores.m
+%SCRIPT to graph errors in the detection process. The errors are represented for the different hypotheses based on SNR.
+
+
+Different signals can be selected such as:
+%%********************* TEST SIGNAL GENERATOR
+% 1 % Señal de FHSS; 
+% 2 % Señal LFM con control del ancho de banda 
+% 3 % Señal DSSS
+% 4 % Señal Pulso CW
+% 5 % Señal BPSK
+% 6 % Señal CW Coseno
+% 7 % Señal CW Seno
+% 8 % Señal DSSS Pulso
+% 9 % Señal de FHSS continua; 
+% otherwise %Señal VCO Frecuencia variable
+
+To select a signal, the number of the signal to be generated is assigned to the variable (TipSx)
+
+
+%*****************************************************************
+Código distribuido bajo licencia ECR (Emplee, Contribuya y Reconozca)
+Code distributed under ECR license (Employ, Contribute and Recognize)
+Copyright (c) 2020 Jorge Y. Hernández García
+
+https://www.researchgate.net/profile/Jorge_Y_Garcia
+
+%*****************************************************************
